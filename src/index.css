@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 :root {
   --brand-blue: hsl(197 100% 27.5%);
   --brand-blue-foreground: hsl(0 0% 100%);
