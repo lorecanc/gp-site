@@ -96,10 +96,26 @@ export const about = {
   paragraph:
     "GP Consulenti del Lavoro è uno studio professionale che da oltre vent'anni affianca le aziende italiane nella gestione del personale, con un approccio orientato alla qualità, alla continuità del servizio e alla costruzione di relazioni di lungo periodo. Il nostro metodo mette al centro le persone: ascoltiamo le esigenze del cliente, studiamo soluzioni personalizzate e garantiamo risposte rapide e competenti su ogni tematica giuslavoristica.",
   values: [
-    { icon: Shield, label: "Affidabilità" },
-    { icon: Award, label: "Competenza" },
-    { icon: Lock, label: "Riservatezza" },
-    { icon: Sparkles, label: "Innovazione" },
+    {
+      icon: Shield,
+      label: "Affidabilità",
+      description: "Scadenze rispettate e risposte puntuali, ogni giorno.",
+    },
+    {
+      icon: Award,
+      label: "Competenza",
+      description: "Vent'anni di esperienza in oltre 15 settori.",
+    },
+    {
+      icon: Lock,
+      label: "Riservatezza",
+      description: "Dati del personale protetti e conformi al GDPR.",
+    },
+    {
+      icon: Sparkles,
+      label: "Innovazione",
+      description: "Portali digitali e strumenti sempre aggiornati.",
+    },
   ],
 }
 

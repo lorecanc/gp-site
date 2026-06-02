@@ -1,4 +1,10 @@
 import { BlurFade } from "@/components/ui/blur-fade"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { about } from "@/lib/copy"
 
 export function About() {
@@ -22,29 +28,36 @@ export function About() {
         </div>
 
         <BlurFade delay={0.2} inView>
-          <div className="rounded-md bg-[var(--brand-light-blue-accent)] p-8 shadow-sm">
-            <h3 className="mb-6 text-xl font-bold text-foreground">
-              I nostri valori
-            </h3>
-            <ul className="space-y-5">
-              {about.values.map(({ icon: Icon, label }, index) => (
-                  <BlurFade
-                    key={label}
-                    delay={0.2 + index * 0.1}
-                    inView
-                  >
-                  <li className="flex items-center gap-4">
-                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                      <Icon className="h-5 w-5" aria-hidden />
-                    </span>
-                    <span className="text-base font-semibold text-foreground">
-                      {label}
-                    </span>
-                  </li>
+          <Card className="border-border bg-background shadow-sm">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-2xl font-semibold text-foreground">
+                I nostri valori
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {about.values.map(({ icon: Icon, label, description }, index) => (
+                <BlurFade
+                  key={label}
+                  delay={0.2 + index * 0.1}
+                  inView
+                >
+                  <div className="flex items-start gap-4 pb-6 border-b border-border last:border-b-0 last:pb-0">
+                    <div className="flex-shrink-0 mt-0.5">
+                      <Icon className="h-6 w-6 text-primary" aria-hidden />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold text-foreground mb-1">
+                        {label}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {description}
+                      </p>
+                    </div>
+                  </div>
                 </BlurFade>
               ))}
-            </ul>
-          </div>
+            </CardContent>
+          </Card>
         </BlurFade>
       </div>
     </section>
