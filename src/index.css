@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --brand-blue: hsl(197 100% 27.5%);
+  --brand-blue-foreground: hsl(0 0% 100%);
+  --brand-light-blue-tint: hsl(197 100% 96%);
+  --brand-light-blue-accent: hsl(197 85% 90%);
+  --brand-dark: hsl(200 50% 12%);
+  --brand-dark-foreground: hsl(0 0% 100%);
+
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(200 30% 12%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(200 30% 12%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(200 30% 12%);
+
+  --primary: var(--brand-blue);
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(197 30% 96%);
+  --secondary-foreground: hsl(200 30% 12%);
+
+  --muted: hsl(200 15% 96%);
+  --muted-foreground: hsl(200 10% 45%);
+
+  --accent: hsl(197 85% 90%);
+  --accent-foreground: var(--brand-blue);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(200 15% 90%);
+  --input: hsl(200 15% 90%);
+  --ring: var(--brand-blue);
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --brand-blue: hsl(197 90% 50%);
+  --brand-blue-foreground: hsl(200 50% 8%);
+  --brand-light-blue-tint: hsl(200 50% 10%);
+  --brand-light-blue-accent: hsl(200 40% 16%);
+  --brand-dark: hsl(200 50% 6%);
+  --brand-dark-foreground: hsl(0 0% 100%);
+
+  --background: hsl(200 50% 6%);
+  --foreground: hsl(0 0% 96%);
+
+  --card: hsl(200 40% 10%);
+  --card-foreground: hsl(0 0% 96%);
+
+  --popover: hsl(200 40% 10%);
+  --popover-foreground: hsl(0 0% 96%);
+
+  --primary: var(--brand-blue);
+  --primary-foreground: hsl(200 50% 8%);
+
+  --secondary: hsl(200 30% 16%);
+  --secondary-foreground: hsl(0 0% 96%);
+
+  --muted: hsl(200 30% 14%);
+  --muted-foreground: hsl(200 10% 65%);
+
+  --accent: hsl(200 40% 18%);
+  --accent-foreground: hsl(197 90% 70%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(200 30% 18%);
+  --input: hsl(200 30% 18%);
+  --ring: var(--brand-blue);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-foreground: var(--brand-blue-foreground);
+  --color-brand-light-blue-tint: var(--brand-light-blue-tint);
+  --color-brand-light-blue-accent: var(--brand-light-blue-accent);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-foreground: var(--brand-dark-foreground);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: calc(var(--radius));
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
