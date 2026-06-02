@@ -1,7 +1,9 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { useContactDialog } from "@/lib/contact-dialog"
 import { brand, footer } from "@/lib/copy"
+import { MapsDialog } from "@/components/MapsDialog"
 
 type ContactItem = {
   key: string
@@ -32,6 +34,7 @@ const contactItems: ContactItem[] = [
 
 export function Footer() {
   const { openDialog } = useContactDialog()
+  const [mapsOpen, setMapsOpen] = useState(false)
 
   return (
     <footer className="bg-[var(--brand-dark)] text-[var(--brand-dark-foreground)]">
@@ -91,7 +94,14 @@ export function Footer() {
                 )
                 return (
                   <li key={key} className="group">
-                    {href ? (
+                    {key === "address" ? (
+                      <button
+                        onClick={() => setMapsOpen(true)}
+                        className="block w-full text-left cursor-pointer"
+                      >
+                        {inner}
+                      </button>
+                    ) : href ? (
                       <a href={href} className="block">
                         {inner}
                       </a>
@@ -101,6 +111,11 @@ export function Footer() {
                   </li>
                 )
               })}
+              <MapsDialog
+                open={mapsOpen}
+                onOpenChange={setMapsOpen}
+                address={footer.contact.address}
+              />
               <li>
                 <Button
                   variant="ctaOutline"
